@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using static MVC.Enum.EnumTypes;
 
 namespace MVC.Models
 {
@@ -12,7 +13,7 @@ namespace MVC.Models
         public string Name { get; set; }
 
         [Required]
-        public string Position { get; set; }
+        public Positions Position { get; set; }
 
         [Range(18, 60, ErrorMessage = "Age Should be min 18 and max 60")]
         [Required]
@@ -26,4 +27,6 @@ namespace MVC.Models
 
         public string imageString { get; set; }
     }
+
+   
 }
